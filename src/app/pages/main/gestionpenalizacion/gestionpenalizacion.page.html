@@ -1,0 +1,22 @@
+<app-header title="Gestion de Penalización"></app-header>
+<ion-content>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td class="ion-text-center">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <ion-button (click)="perdonarReservas(user.code)" >Perdonar Reservas</ion-button>
+            <ion-button (click)="liberarUsuario(user.email)" style="margin-bottom: 10px;">Habilitar</ion-button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>
